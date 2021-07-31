@@ -1855,7 +1855,7 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 __webpack_require__(/*! ./components/Example */ "./resources/js/components/Example.js");
 
-Echo.channel("notifications").listen("UserSessionChanged", function (e) {
+Echo["private"]("notifications").listen("UserSessionChanged", function (e) {
   var notificaisones = document.getElementById("notificaciones");
   notificaisones.innerText = e.message;
   notificaisones.classList.remove("invisible");

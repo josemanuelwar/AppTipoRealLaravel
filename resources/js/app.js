@@ -14,7 +14,7 @@ require('./bootstrap');
 
 require('./components/Example');
 
-Echo.channel("notifications").listen("UserSessionChanged", (e) => {
+Echo.private("notifications").listen("UserSessionChanged", (e) => {
     const notificaisones = document.getElementById("notificaciones");
     notificaisones.innerText = e.message;
     notificaisones.classList.remove("invisible");
