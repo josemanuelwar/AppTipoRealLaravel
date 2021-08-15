@@ -78,7 +78,7 @@
         </main>
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}"></script>
-        @method("script")
+        @stack("scripts")
     </div>
 </body>
 </html>

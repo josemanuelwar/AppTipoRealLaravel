@@ -2,8 +2,10 @@
 
 namespace App\Providers;
 
+use App\Events\UserCreated;
 use App\Listeners\BroadcastUserLoginNotification;
 use App\Listeners\BroadcastUserLogoutNotification;
+use App\Listeners\UserCreated as ListenersUserCreated;
 use Illuminate\Auth\Events\Login;
 use Illuminate\Auth\Events\Logout;
 use Illuminate\Auth\Events\Registered;
@@ -27,6 +29,9 @@ class EventServiceProvider extends ServiceProvider
         ],
         Logout::class=>[
             BroadcastUserLogoutNotification::class,
+        ],
+        UserCreated::class=>[
+            ListenersUserCreated::class,
         ],
     ];
 
